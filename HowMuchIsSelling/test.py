@@ -38,7 +38,7 @@ if r.status_code == 200:
     print(numSell)
     print(type(numSell))
 
-f = open('lj.csv','w',encoding='utf-8')
+f = open('lj.csv','a+',encoding='utf-8') #open中的a+方式是增加列
 
     # 2. 基于文件对象构建 csv写入对象
 csv_writer = csv.writer(f)
