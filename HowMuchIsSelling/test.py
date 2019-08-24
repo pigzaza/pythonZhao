@@ -1,6 +1,14 @@
 import requests
 import re
+import schedule #pip
+import time
+import csv      #pip
+import datetime
 
+today=datetime.date.today()
+print (today)
+#str(today)
+print (type(today))
 
 url = 'https://bj.lianjia.com'
 
@@ -29,3 +37,14 @@ if r.status_code == 200:
     #用空格把 房、86452、套 分开，取第二个数字那部分
     print(numSell)
     print(type(numSell))
+
+f = open('lj.csv','w',encoding='utf-8')
+
+    # 2. 基于文件对象构建 csv写入对象
+csv_writer = csv.writer(f)
+
+    # 4. 写入csv文件内容
+csv_writer.writerow([today,numSell])
+
+    # 5. 关闭文件
+f.close()
