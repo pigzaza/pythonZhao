@@ -12,3 +12,6 @@
 2.使用nohup, 该命令不会被登出信号影响
 
 nohup python xx.py >null  2>&1 &
+或者只需要
+>nohup python xx.py & 
+就可以了吗？
