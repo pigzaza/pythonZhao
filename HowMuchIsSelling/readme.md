@@ -11,4 +11,8 @@
 
 2.使用nohup, 该命令不会被登出信号影响
 
+nohup python -u robot.py > robot.log 2>&1 &
+-u 就是指定实时的日志输出目录，而 & 符号是使程序在后台运行，一边运行还可以一边查看日志输出文件，这里的 robot.log 就是我们的日志输出文件。
 >nohup python xx.py >null  2>&1 &
+
+
