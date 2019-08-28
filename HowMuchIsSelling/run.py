@@ -26,7 +26,7 @@ def add_data(num):
     now = datetime.datetime.now()
     f = open('lj.csv','a+',encoding='utf-8')
     csv_writer = csv.writer(f)
-    csv_writer.writerow([now,num])
+    csv_writer.writerow([now,num，today])
     f.close()
 
 def job():
